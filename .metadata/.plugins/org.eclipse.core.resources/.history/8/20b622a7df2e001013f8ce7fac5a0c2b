@@ -1,0 +1,18 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller //アノテーション:ソースコードだけではコンパイル出来ない
+public class HelloController {
+
+	@GetMapping("/hello")
+	public String hello() {
+		return "hello";
+	}
+
+	@GetMapping({ "/", "/test" }) //GRTメソッドでURLパターン「/」でアクセスされた場合に呼び出される　:　「/」 = 「http://localhost:8080
+	public String index() {
+		return "hello";
+	}
+}

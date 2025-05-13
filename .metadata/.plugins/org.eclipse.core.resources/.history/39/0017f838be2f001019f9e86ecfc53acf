@@ -1,0 +1,29 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+public class ContactController {
+	@Controller
+	public class ItemController {
+
+		@GetMapping("/contact")
+		public String index() {
+			return "contactForm";//表示するhtmlのファイル名
+		}
+
+		@PostMapping("/contact")
+		public String contact(
+				@RequestParam(name = "name", defaultValue = "") String name,
+				@RequestParam(name = "e-mail", defaultValue = "") String mail,
+				Model model) {
+
+			model.addAttribute("name", name);
+			model.addAttribute("mail", mail);
+			return "contactResult";
+		}
+	}
+}

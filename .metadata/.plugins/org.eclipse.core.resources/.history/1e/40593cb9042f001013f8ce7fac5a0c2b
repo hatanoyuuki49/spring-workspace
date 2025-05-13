@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://hello">
+<head>
+<meta charset="UTF-8">
+<title>Hello</title>
+</head>
+<body>
+	<h1>自己紹介</h1>
+	<table border="1">
+		<th>名前</th>
+		<th:text="${name}"></th:text>
+	</table>
+
+</body>
+</html>

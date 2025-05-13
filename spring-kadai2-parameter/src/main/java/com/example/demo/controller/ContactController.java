@@ -1,0 +1,50 @@
+package com.example.demo.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class ContactController {
+
+	@GetMapping("/contact")
+	public String index() {
+		return "contactForm";//表示するhtmlのファイル名
+	}
+
+	@PostMapping("/contact")
+	public String contact(
+			@RequestParam(name = "name", defaultValue = "") String name, //表示するだけ
+			@RequestParam(name = "email", defaultValue = "") String email,
+			@RequestParam(name = "lang", defaultValue = "") String[] langList,
+			Model model) {
+
+		List<String> error = new ArrayList<String>();//エラーメッセージの初期化
+
+		if (name.equals("")) {
+			error.add("名前が必須です");
+		} else if (name.length() > 20) {
+			error.add("名前は20文字以内で入力してください");
+		}
+		if (email.equals("")) {
+			error.add("メアドは必須です");
+		}
+		if (error.size() > 0) {
+			model.addAttribute("error", error);
+
+			return "contactForm";
+		}
+
+		model.addAttribute("name", name);
+		model.addAttribute("email", email);
+		model.addAttribute("langList", langList);
+		return "contactResult";
+	}
+}
+//(name = "name", defaultValue = "") 
+//(name = "email", defaultValue = "")

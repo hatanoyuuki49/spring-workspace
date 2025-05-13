@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://hello">
+<head>
+<meta charset="UTF-8">
+<title>Input</title>
+</head>
+<body>
+	<h2>情報を入力してください</h2>
+		<!--<a href="http://hello"></a>-->
+<form action="/hello" method="post">
+	<h3>名前:</h3>		
+			<input type="text" name="name" />
+	<h3>年齢:</h3>
+		<!--<a href="http://hello"></a>-->
+		
+			<input type="text" age="age" />
+	<h3>趣味:</h3>
+		<!--<a href="http://hello"></a>-->
+			<input type="text" hobby="hobby" />
+		<button>送信</button>
+</form>
+
+</body>
+</html>
