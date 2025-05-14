@@ -7,6 +7,18 @@
 <body>
 	<h1>お問い合わせありがとうございます</h1>
 		<table border="1">
+			<tr><th>種別</th><td><input type="radio">資料請求<br>
+								<input type="radio">見積り依頼</td>
+			</tr>
+			<tr>
+				<th>言語「必須」</th>
+					<td>
+					<span th:each="lang:${langList}" th:text="${lang}+', '"></span>
+			</tr>
+			<tr>
+				<th>詳細内容</th>
+			</tr>
+						
 			<tr><th>名前</th><td th:text="${name}"></td></tr>
 			<tr><th>メールアドレス</th><td th:text="${email}"></td></tr>
 		</table>

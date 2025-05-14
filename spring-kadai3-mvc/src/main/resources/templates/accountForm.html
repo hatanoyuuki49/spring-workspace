@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>会員登録</h1>
+	<ul th:if="${error}">
+		<li th:each="errors:${error}" th:text="${errors}"></li>
+	</ul>
+	
+	<form action = "/account/confirm" method = "post">
+		<table border="1">
+			<tr>
+				<th>お名前</th>
+			  <td>
+				<input type="text" name="name" th:value="${name}"></td>
+			</tr>
+			<tr>
+				<th>メールアドレス</th>
+			  <td>
+				<input type="text" name="email" th:value="${email}"></td>
+			</tr>
+			<tr>
+				<th>パスワード</th>
+			  <td>
+				<input type="text" name="password" th:value="${password}"></td>
+			</tr>
+		</table>
+		<button>確認</button>
+	</form>	
+</body>
+</html>

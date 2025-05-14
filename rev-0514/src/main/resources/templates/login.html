@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/login" method="post"></form><!--methodを省略した場合getになる-->
+		ユーザID：<input type="text" name="id" /><br />
+		パスワード:<input type="text" name="password" /><br />
+		<button>ログイン</button>
+	</form>
+	<div th:if test="${mesage}"><!--/divは意味がないという意味-->
+		<p th:text="${message}"></p>
+	</div>	
+<!--	<th:if test="${mesage}">divでもth:ifでも可-->
+<!--			<p th:text="${message}"></p>-->
+<!--	</th:if>		-->
+</body>
+</html>
