@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.model_example.Account;
-
 @Controller
 public class AccountController {
 
@@ -29,6 +27,7 @@ public class AccountController {
 			Model model) {
 		// リクエストパラメータから会員クラスのインスタンスを生成
 		Account account = new Account(name, email, password);
+
 		// 遷移先画面に引き継ぐために会員インスタンスをスコープに登録
 		model.addAttribute("account", account);
 		// 画面遷移

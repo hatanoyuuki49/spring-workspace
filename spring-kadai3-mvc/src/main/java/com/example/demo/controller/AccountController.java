@@ -38,7 +38,7 @@ public class AccountController {
 		}
 		if (error.size() > 0) {
 			model.addAttribute("error", error);
-			model.addAttribute("error", name);
+			model.addAttribute("name", name);
 			model.addAttribute("email", email);
 			model.addAttribute("password", password);
 		}

@@ -26,15 +26,4 @@ public class Account {
 		return this.password;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setName1(String email) {
-		this.email = email;
-	}
-
-	public void setName2(String password) {
-		this.password = password;
-	}
 }
