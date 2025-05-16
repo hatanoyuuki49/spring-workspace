@@ -8,7 +8,7 @@
 		<item key="DIALOG_FONT_NAME" value="1|Yu Gothic UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Yu Gothic UI"/>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.wst.html.ui.internal.wizard.NewHTMLWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
 			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
@@ -34,6 +34,7 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\student\Desktop\授業用ソースコード\Java\Springフレームワーク_ソースコード\spring-chap5-session\src\main\resources\templates"/>
 			<item value="C:\Users\student\Desktop\授業用ソースコード\Java\Springフレームワーク_ソースコード\spring-chap4-mvc\src\main\resources\templates"/>
 			<item value="C:\Users\student\Desktop\授業用ソースコード\Java\Springフレームワーク_ソースコード\spring-chap3-parameter\src\main\resources\templates"/>
 		</list>
